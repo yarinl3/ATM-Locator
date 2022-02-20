@@ -1,5 +1,5 @@
 # ATM Locator
-![ScreenShot](https://github.com/yarinl3/ATM-Locator/blob/main/pic.png?raw=true)
+![ScreenShot](https://github.com/yarinl3/ATM-Locator/blob/main/pic1.png?raw=true)
 
 ## License & copyright
 Yarin Levi
