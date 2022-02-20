@@ -4,7 +4,8 @@ from prettytable import PrettyTable
 import json
 import requests
 import warnings
-
+__version__ = '1.0.2'
+__author__ = 'Yarin Levi <yarinl330@gmail.com>'
 
 def error_check(func):
     try:
@@ -30,8 +31,8 @@ def get_atm(meters, address_coord):
     offset = 0
     branch_list, all_results = [], []
     while True:
-        url = f'https://data.gov.il/api/3/action/datastore_search_sql?' \
-              f'sql=SELECT * from "b9d690de-0a9c-45ef-9ced-3e5957776b26" LIMIT 999 OFFSET {offset}'
+        url = f'https://data.gov.il/api/3/action/datastore_search?' \
+              f'resource_id=b9d690de-0a9c-45ef-9ced-3e5957776b26&limit=999&offset={offset}'
         results = json.loads(requests.get(url).text)['result']['records']
         if len(results) == 0:
             break
